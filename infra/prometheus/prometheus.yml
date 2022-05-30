@@ -1,0 +1,12 @@
+global:
+  scrape_interval:     2s
+  evaluation_interval: 1s
+
+scrape_configs:
+  - job_name: ports
+    static_configs:
+      - targets: [ 'ports:8080' ]
+        labels:
+          dc: "ports"
+          hostname: "ports"
+          service: "ports"
